@@ -1,10 +1,13 @@
 import {words} from "../constants/index.js";
 import Button from "../components/Button.jsx";
+import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
 
 
 const Hero = () => {
     return (
+
         <section id="hero" className="relative overflow-hidden">
+
             <div className="absolute top-0 left-0 z-0">
                 <img src="/images/bg.png" alt="background" />
             </div>
@@ -30,12 +33,20 @@ const Hero = () => {
                             <h1>that Deliver Results</h1>
                         </div>
                         <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                            Hi, I'm Jun, a developer always tries the best at every single opportunity given, focusing and loving to learn new technologies.
+                            Hi, I'm Jun<span className="waving-hand">✌️</span> <br/>
+                            A passionate developer who gives 100% to every opportunity,  <br/>
+                            I love learning new technologies and continuously growing with each project.
                         </p>
                         <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="See my Work" />
                     </div>
                 </header>
                 {/*RIGHT */}
+                <figure>
+                    <div className="hero-3d-layout">
+                        <HeroExperience/>
+
+                    </div>
+                </figure>
             </div>
         </section>
     )
