@@ -6,11 +6,12 @@ import HeroLight from "./HeroLight.jsx";
 
 
 const HeroExperience = () => {
-    const isTablet = useMediaQuery({query:'(max-width: 1024px)'});
-    const isMobile = useMediaQuery({query:'(max-width: 768px)'});
+    const isMobile = useMediaQuery({query:"(max-width: 768px)"});
+    const isTablet = useMediaQuery({query:"(max-width: 1024px)"});
+
     return (
         <Canvas camera={{position:[0,0,15],fov:45}}>
-
+            <ambientLight intensity={0.2} color="#1a1a40"/>
             <OrbitControls enablePan={false}
                            enableZoom={!isTablet}
                            maxDistance={20}
@@ -21,9 +22,9 @@ const HeroExperience = () => {
             <HeroLight/>
             <group scale={isMobile ? 0.7 : 1}
                    position={[0,-3.5,0]}
-                   rotation={[0,-Math.PI/2,0]}
+                   rotation={[0,-Math.PI/4,0]}
             >
-                <Room/>
+            <Room/>
             </group>
 
         </Canvas>

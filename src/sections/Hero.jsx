@@ -1,9 +1,26 @@
 import {words} from "../constants/index.js";
 import Button from "../components/Button.jsx";
 import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
-
+import {useGSAP} from '@gsap/react';
+import gsap from 'gsap';
+import AnimatedCounter from "../components/HeroModels/AnimatedCounter.jsx";
 
 const Hero = () => {
+    useGSAP(()=> {
+        gsap.fromTo('.hero-text h1',
+            {
+                y: 50,
+                opacity: 0
+            },
+            {
+                y: 0,
+                opacity: 1,
+                stagger: 0.2,
+                duration: 1,
+                ease: 'power2.inOut'
+            },
+        )
+    })
     return (
 
         <section id="hero" className="relative overflow-hidden">
@@ -21,7 +38,7 @@ const Hero = () => {
                                     <span className="wrapper">
                                         {words.map((word)=>(
                                             <span key={word.text} className="flex items-center md:gap-3 gap-1 pb-2">
-                                                <img src={word.imgPath} alt={word.text} className="xl:size-12 md size-10 size-7 md:p-2 p-1 rounded-full bg-white-50" />
+                                                <img src={word.imgPath} alt={word.text} className="xl:size-12 md size-10  md:p-2 p-1 rounded-full bg-white-50" />
                                             <span>{word.text}</span>
                                             </span>
                                         ))}
@@ -37,17 +54,19 @@ const Hero = () => {
                             A passionate developer who gives 100% to every opportunity,  <br/>
                             I love learning new technologies and continuously growing with each project.
                         </p>
-                        <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="See my Work" />
+                        <Button className="md:w-80 md:h-16 w-60 h-12 z-[1]
+" id="counter" text="See my Work"  />
                     </div>
                 </header>
                 {/*RIGHT */}
                 <figure>
-                    <div className="hero-3d-layout">
+                    <div className="hero-3d-layout ">
                         <HeroExperience/>
 
                     </div>
                 </figure>
             </div>
+            <AnimatedCounter />
         </section>
     )
 }
