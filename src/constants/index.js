@@ -36,38 +36,84 @@ const counterItems = [
 
 const logoIconsList = [
     {
-        imgPath: "/images/logos/company-logo-1.png",
+        imgPath: "/images/logos/android.png",
     },
     {
-        imgPath: "/images/logos/company-logo-2.png",
+        imgPath: "/images/logos/c-.png",
     },
     {
-        imgPath: "/images/logos/company-logo-3.png",
+        imgPath: "/images/logos/c-sharp.png",
     },
     {
-        imgPath: "/images/logos/company-logo-4.png",
+        imgPath: "/images/logos/chat-gpt.png",
     },
     {
-        imgPath: "/images/logos/company-logo-5.png",
+        imgPath: "/images/logos/css.png",
     },
     {
-        imgPath: "/images/logos/company-logo-6.png",
+        imgPath: "/images/logos/discord.png",
     },
     {
-        imgPath: "/images/logos/company-logo-7.png",
+        imgPath: "/images/logos/excel.png",
     },
     {
-        imgPath: "/images/logos/company-logo-8.png",
+        imgPath: "/images/logos/figma.png",
     },
     {
-        imgPath: "/images/logos/company-logo-9.png",
+        imgPath: "/images/logos/github.png",
     },
     {
-        imgPath: "/images/logos/company-logo-10.png",
+        imgPath: "/images/logos/gmail.png",
     },
     {
-        imgPath: "/images/logos/company-logo-11.png",
+        imgPath: "/images/logos/google.png",
     },
+    {
+        imgPath: "/images/logos/html-5.png",
+    },
+    {
+        imgPath: "/images/logos/java.png",
+    },
+    {
+        imgPath: "/images/logos/js.png",
+    },
+    {
+        imgPath: "/images/logos/linkedin.png",
+    },
+    {
+        imgPath: "/images/logos/linux.png",
+    },
+    {
+        imgPath: "/images/logos/microsoft.png",
+    },
+    {
+        imgPath: "/images/logos/node.png",
+    },
+    {
+        imgPath: "/images/logos/powerpoint.png",
+    },
+    {
+        imgPath: "/images/logos/react.png",
+    },
+    {
+        imgPath: "/images/logos/shopify.png",
+    },
+    {
+        imgPath: "/images/logos/three.png",
+    },
+    {
+        imgPath: "/images/logos/windows.png",
+    },
+    {
+        imgPath: "/images/logos/word.png",
+    },
+    {
+        imgPath: "/images/logos/wordpress.png",
+    },
+    {
+        imgPath: "/images/logos/youtube.png",
+    },
+
 ];
 
 const abilities = [

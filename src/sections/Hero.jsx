@@ -3,7 +3,8 @@ import Button from "../components/Button.jsx";
 import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
 import {useGSAP} from '@gsap/react';
 import gsap from 'gsap';
-import AnimatedCounter from "../components/HeroModels/AnimatedCounter.jsx";
+import AnimatedCounter from "../components/AnimatedCounter.jsx";
+import {Leva} from "leva";
 
 const Hero = () => {
     useGSAP(()=> {
@@ -28,7 +29,7 @@ const Hero = () => {
             <div className="absolute top-0 left-0 z-0">
                 <img src="/images/bg.png" alt="background" />
             </div>
-            <div className="hero-layout">
+            <div className="hero-layout z-[1]">
                 {/*LEFT */}
                 <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5" >
                     <div className="flex flex-col gap-7">
@@ -54,13 +55,12 @@ const Hero = () => {
                             A passionate developer who gives 100% to every opportunity,  <br/>
                             I love learning new technologies and continuously growing with each project.
                         </p>
-                        <Button className="md:w-80 md:h-16 w-60 h-12 z-[1]
-" id="counter" text="See my Work"  />
+                        <Button className="md:w-80 md:h-16 w-60 h-12 " id="work" text="See my Work"  />
                     </div>
                 </header>
                 {/*RIGHT */}
                 <figure>
-                    <div className="hero-3d-layout ">
+                    <div className="hero-3d-layout " >
                         <HeroExperience/>
 
                     </div>
