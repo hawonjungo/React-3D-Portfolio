@@ -9,11 +9,11 @@ const Particles = ({ count = 200 }) => {
         for (let i = 0; i < count; i++) {
             temp.push({
                 position: [
-                    (Math.random() - 0.5) * 10,
-                    Math.random() * 10 + 5, // higher starting point
-                    (Math.random() - 0.5) * 10,
+                    Math.random() * 10 - 5, // X range
+                    Math.random() * 10,     // Y (height) stays fixed
+                    Math.random() * 10 - 5, // Z range
                 ],
-                speed: 0.005 + Math.random() * 0.001,
+                speed: 0.02 + Math.random() * 0.001,
             });
         }
         return temp;
@@ -22,10 +22,10 @@ const Particles = ({ count = 200 }) => {
     useFrame(() => {
         const positions = mesh.current.geometry.attributes.position.array;
         for (let i = 0; i < count; i++) {
-            let y = positions[i * 3 + 1];
-            y -= particles[i].speed;
-            if (y < -2) y = Math.random() * 10 + 5;
-            positions[i * 3 + 1] = y;
+            let x = positions[i * 3]; // Update X instead of Y
+            x += particles[i].speed;
+            if (x > 6) x = -6; // Reset to left when out of bounds
+            positions[i * 3] = x;
         }
         mesh.current.geometry.attributes.position.needsUpdate = true;
     });

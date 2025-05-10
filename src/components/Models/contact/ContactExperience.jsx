@@ -2,8 +2,12 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
 import Computer from "./Computer";
+import IntroCamera from "../../HeroModels/IntroCamera.jsx";
+import {useMediaQuery} from "react-responsive";
 
 const ContactExperience = () => {
+
+    const isMobile = useMediaQuery({query:"(max-width: 768px)"})
     return (
         <Canvas shadows camera={{ position: [0, 3, 7], fov: 45 }}>
             <ambientLight intensity={0.5} color="#fff4e6" />
@@ -35,7 +39,10 @@ const ContactExperience = () => {
             </group>
 
             <group scale={0.03} position={[0, -1.49, -2]} castShadow>
-                <Computer />
+                <IntroCamera isMobile={isMobile} >
+                    <Computer />
+                </IntroCamera>
+
             </group>
         </Canvas>
     );

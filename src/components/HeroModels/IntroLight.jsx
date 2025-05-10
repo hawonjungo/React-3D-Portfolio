@@ -1,9 +1,12 @@
 import * as THREE from 'three';
 
-const HeroLight = () => {
+const IntroLight = () => {
     return (
        <>
-
+           <directionalLight position={[2,2, 20]} intensity={[20]} />
+           <directionalLight position={[0,0, -5]} intensity={[5]} />
+           <directionalLight position={[0,20, 0]} intensity={[5]} />
+           <hemisphereLight skyColor={0xffffbb} groundColor={0x080820} intensity={1} />
           <spotLight position={[2, 4, 5]}       // Place above and to the side
                      angle={360}
                      intensity={100}            // Reasonable brightness
@@ -24,7 +27,7 @@ const HeroLight = () => {
                       penumbra={1}
                       color="#9d4edd"
            />
-           <primitive object={new THREE.RectAreaLight('##faffff',100,100,100)}
+           <primitive object={new THREE.RectAreaLight('#faffff',100,100,100)}
                       position={[15,15,15]}
                       intensity={150}
                       rotation={[-Math.PI/4,Math.PI/4,0]}
@@ -42,4 +45,4 @@ const HeroLight = () => {
        </>
     )
 }
-export default HeroLight
+export default IntroLight
