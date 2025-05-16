@@ -257,6 +257,11 @@ const socialImgs = [
         url: "https://www.linkedin.com/",
         imgPath: "/images/linkedin.png",
     },
+    {
+        name: "oldHome",
+        url: "https://junportfolio-80d45.firebaseapp.com/",
+        imgPath: "/images/old-home.png",
+    },
 ];
 
 export {
