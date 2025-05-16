@@ -5,12 +5,21 @@ import {easing} from 'maath'
 const IntroCamera = ({children,isMobile}) => {
     const groupRef = useRef();
 
-    useFrame((state,delta) =>{
-        easing.damp3(state.camera.position,[0,0,20],0.25,delta);
-        if(!isMobile){
-            easing.dampE(groupRef.current.rotation,[state.pointer.y/3,-state.pointer.x/5,0],0.25,delta);
+    useFrame((state, delta) => {
+        easing.damp3(state.camera.position, [0, 0, 20], 0.25, delta);
+
+        if (!isMobile && groupRef.current) {
+            const rotationY = state.pointer.x * 0.5;
+            const rotationX = -state.pointer.y * 0.3;
+
+            easing.dampE(
+                groupRef.current.rotation,
+                [rotationX, rotationY, 0],
+                0.25,
+                delta
+            );
         }
-    })
+    });
 
 
     return (

@@ -36,12 +36,12 @@ const ShowCaseSection = () => {
                     {/*LEFT*/}
                     <div className="first-project-wrapper" ref={project1Ref}>
                         <div className="image-wrapper">
-                            <img src="/images/project1.png" alt="Ryde" />
+                            <img src="/images/3Element.PNG" alt="3Elements"   className="w-full h-full object-contain"/>
                         </div>
                         <div className="text-content">
-                            <h2>On -Demand Rides Made Simple with a App call Ryde</h2>
+                            <h2>C++ Game (SDL2): Titled "Three Elements".</h2>
                             <p className="text-white-50 md:text-xl">
-                                An app built with React Native, Redux, and Firebase.
+                                2D game using OOP, SDL2 for graphics and event handling.
                             </p>
                         </div>
                     </div>
@@ -49,15 +49,15 @@ const ShowCaseSection = () => {
                     <div className="project-list-wrapper overflow-hidden">
                         <div className="project" ref={project2Ref}>
                             <div className="image-wrapper bg-[#ffefdb]">
-                                <img src="/images/project2.png" alt="Library Management Platform" />
+                                <img src="/images/rosagif.gif" alt="rosaPig" />
                             </div>
-                            <h2>Library Management Platform</h2>
+                            <h2> Rosa Pig: Created by using NodeJS + Express + MongoDB(Mongoose) </h2>
                         </div>
                         <div className="project" ref={project3Ref}>
                             <div className="image-wrapper bg-[#ffe7eb]">
-                                <img src="/images/project3.png" alt="YC Directory" />
+                                <img src="/images/inventory.PNG" alt="inventory" />
                             </div>
-                            <h2>YC Director - A start up showcase App</h2>
+                            <h2>React (Hooks), MongoDB, and RESTful APIs for inventory tracking.</h2>
                         </div>
                     </div>
 

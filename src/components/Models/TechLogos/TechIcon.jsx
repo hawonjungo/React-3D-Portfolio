@@ -14,7 +14,7 @@ const TechIcon = ({model}) => {
                 }
             })
         }
-    },[scene])
+    },[model.name, scene])
 
     return (
         <Canvas>
